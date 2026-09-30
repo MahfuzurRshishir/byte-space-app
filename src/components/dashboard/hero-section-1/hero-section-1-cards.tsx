@@ -206,7 +206,7 @@ export function CardStudents() {
         <StarIcon />
       </div>
       {/* Avatar grid */}
-      <img src="/circle-avatar-grid.svg" alt="Student avatars" className="w-full" />
+      <img src="/cricle-avatar-grid.svg" alt="Student avatars" className="w-full" />
     </div>
   );
 }
