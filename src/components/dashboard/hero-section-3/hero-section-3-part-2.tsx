@@ -7,15 +7,15 @@ export default function HeroSection3Part2() {
       <div
         className="
           mx-auto w-full max-w-[1440px]
-          py-2  px-4
-          min-[560px]:py-6  min-[560px]:px-8
-          min-[720px]:py-8  min-[720px]:px-12
+          py-8   px-4
+          min-[560px]:py-10  min-[560px]:px-8
+          min-[720px]:py-14  min-[720px]:px-12
           min-[980px]:px-16
           min-[1200px]:px-[120px]
           min-[1440px]:px-[120px]
-          flex flex-col gap-8
-          min-[480px]:gap-10
-          min-[640px]:gap-12
+          flex flex-col gap-6
+          min-[480px]:gap-8
+          min-[640px]:gap-10
           min-[980px]:flex-row min-[980px]:items-center min-[980px]:gap-8
           min-[1080px]:gap-10
           min-[1200px]:gap-12
@@ -25,8 +25,8 @@ export default function HeroSection3Part2() {
         <div
           className="
             w-full
-            mt-16
-            min-[480px]:mt-12
+            mt-6
+            min-[480px]:mt-8
             min-[640px]:mt-0
             min-[980px]:mt-0
             min-[980px]:flex-1

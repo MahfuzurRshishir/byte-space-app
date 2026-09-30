@@ -157,17 +157,17 @@ export default function HeroSection1() {
         {/*  Main content  */}
 
         {/* Headline + subtext */}
-        <div className="mt-20 w-full flex justify-center">
+        <div className="mt-8 min-[480px]:mt-10 min-[720px]:mt-14 min-[980px]:mt-20 w-full flex justify-center">
           <HeroSection1Headline />
         </div>
 
         {/* Search bar */}
-        <div className="relative z-[5] mt-8 w-full flex justify-center">
+        <div className="relative z-[5] mt-5 min-[480px]:mt-6 min-[720px]:mt-8 w-full flex justify-center">
           <HeroSection1Search />
         </div>
 
         {/* Hero visual — green circle + student image + cards */}
-        <div className="mt-12 w-full flex justify-center">
+        <div className="mt-6 min-[480px]:mt-8 min-[720px]:mt-10 min-[980px]:mt-12 w-full flex justify-center">
           <HeroSection1Visual />
         </div>
 

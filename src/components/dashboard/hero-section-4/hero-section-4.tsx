@@ -184,9 +184,9 @@ export default function HeroSection4() {
           className="
             relative z-10
             flex flex-col items-center text-center
-            px-4 py-14
-            min-[560px]:px-8 min-[560px]:py-16
-            min-[860px]:px-16 min-[860px]:py-20
+            px-4 py-10
+            min-[560px]:px-8 min-[560px]:py-12
+            min-[860px]:px-16 min-[860px]:py-16
             min-[1200px]:px-[120px] min-[1200px]:py-24
           "
         >

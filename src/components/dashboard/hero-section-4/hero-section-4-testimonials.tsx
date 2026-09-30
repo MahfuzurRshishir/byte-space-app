@@ -28,20 +28,21 @@ export default function HeroSection4Testimonials() {
       <div
         className="
           mx-auto w-full max-w-[1440px]
-          px-4 py-12
-          min-[560px]:px-8 min-[560px]:py-14
-          min-[720px]:px-12 min-[720px]:py-16
+          px-4 py-8
+          min-[560px]:px-8 min-[560px]:py-10
+          min-[720px]:px-12 min-[720px]:py-12
           min-[980px]:px-16
-          min-[1200px]:px-[120px] min-[1200px]:py-20
+          min-[1200px]:px-[120px] min-[1200px]:py-16
         "
       >
         {/* Top row — heading left, paragraph right */}
         <div
           className="
-            flex flex-col gap-6
+            flex flex-col gap-4
+            min-[480px]:gap-6
             min-[860px]:flex-row min-[860px]:items-start min-[860px]:gap-12
             min-[1200px]:gap-16
-            mb-12 min-[860px]:mb-14 min-[1200px]:mb-16
+            mb-8 min-[860px]:mb-10 min-[1200px]:mb-12
           "
         >
           {/* Left — heading */}
@@ -68,7 +69,8 @@ export default function HeroSection4Testimonials() {
               text-[14px]
               min-[480px]:text-[15px]
               min-[1080px]:text-[16px]
-              min-[860px]:flex-1 min-[860px]:-pt-2 -mt-8 !text-left
+              min-[860px]:flex-1 min-[860px]:pt-2
+              mt-3 min-[860px]:mt-0
             "
           >
             At ByteSpace, our vibrant community of learners and creators is at

@@ -9,14 +9,13 @@ export default function HeroSection2() {
       <div
         className="
           mx-auto w-full max-w-[1440px]
-          py-12  px-4
-          min-[560px]:py-14  min-[560px]:px-8
-          min-[720px]:py-16  min-[720px]:px-12
-          min-[980px]:py-18  min-[980px]:px-16
-          min-[1200px]:py-20 min-[1200px]:px-[120px]
-          min-[1440px]:py-24 min-[1440px]:px-[120px]
-          flex flex-col items-center gap-8
-          min-[640px]:gap-10
+          py-8   px-4
+          min-[560px]:py-10  min-[560px]:px-8
+          min-[720px]:py-12  min-[720px]:px-12
+          min-[980px]:py-14  min-[980px]:px-16
+          min-[1200px]:py-16 min-[1200px]:px-[120px]
+          flex flex-col items-center gap-6
+          min-[640px]:gap-8
           min-[1200px]:gap-12
         "
       >

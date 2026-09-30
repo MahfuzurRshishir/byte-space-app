@@ -39,7 +39,7 @@ export default function FooterMain() {
       "
     >
       {/* Left — logo + newsletter */}
-      <div className="flex flex-col gap-5 max-w-[530px] w-full -mt-10 min-[640px]:w-[45%] min-[860px]:flex-1">
+      <div className="flex flex-col gap-5 max-w-[530px] w-full min-[640px]:w-[45%] min-[860px]:flex-1">
 
         {/* Logo */}
         <img
