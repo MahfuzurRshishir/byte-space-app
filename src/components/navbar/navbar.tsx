@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { CartIcon } from "@/lib/svg/dashboard/cartIcon";
 
@@ -9,19 +8,18 @@ const navLinks = [
 ];
 
 const linkClass =
-  "text-[#F5F5F6] text-[16px] font-[300] leading-[24px] tracking-[0%] hover:underline transition-all";
+  "text-[#F5F5F6] text-[16px] font-[200] leading-[24px] tracking-[0%] hover:underline transition-all";
 
 export default function Navbar() {
   return (
-    <nav className="max-w-[1200px] mx-auto hidden items-center justify-between px-4 py-5 min-[980px]:flex">
+    <nav className="max-w-[1200px] h-[120px] mx-auto hidden items-center justify-between px-4 py-5 min-[980px]:flex">
       {/* Logo */}
       <Link href="/" className="shrink-0">
-        <Image
+        <img
           src="/Header_Logo.svg"
           alt="ByteSpace"
           width={140}
-          height={32}
-          priority
+          className="h-auto"
         />
       </Link>
 
