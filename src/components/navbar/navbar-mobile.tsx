@@ -13,7 +13,7 @@ const navLinks = [
 ];
 
 const linkClass =
-  "text-[#F5F5F6] text-[18px] font-[200] leading-[24px] tracking-[0%] hover:underline transition-all";
+  "text-[#F5F5F6] text-[16px] font-[200] leading-[24px] tracking-[0%] hover:underline transition-all";
 
 export default function NavbarMobile() {
   const [isOpen, setIsOpen] = useState(false);
