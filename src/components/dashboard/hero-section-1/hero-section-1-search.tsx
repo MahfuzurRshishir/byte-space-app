@@ -7,7 +7,7 @@ export default function HeroSection1Search() {
         flex w-full px-4
         flex-col gap-2
         min-[450px]:flex-row min-[450px]:items-stretch min-[450px]:gap-2
-        max-w-full
+        max-w-full min-h-[34px]
         min-[560px]:max-w-[380px] min-[560px]:px-0
         min-[720px]:max-w-[440px]
         min-[980px]:max-w-[500px]
@@ -18,7 +18,7 @@ export default function HeroSection1Search() {
       <div
         className="
           flex items-center gap-2 flex-1 bg-white rounded-[24px]
-          h-[34px] px-3
+          min-h-[34px] px-3
           min-[450px]:h-[36px] min-[450px]:px-4
           min-[560px]:h-[38px]
           min-[720px]:h-[40px] min-[720px]:px-5
