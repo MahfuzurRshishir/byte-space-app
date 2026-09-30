@@ -8,13 +8,13 @@ const navLinks = [
 ];
 
 const linkClass =
-  "text-[#F5F5F6] text-[16px] font-[200] leading-[24px] tracking-[0%] hover:underline transition-all";
+  "text-[#F5F5F6] text-[16px] font-[200] leading-[24px] tracking-[0%] hover:underline transition-all focus:outline-none";
 
 export default function Navbar() {
   return (
     <nav className="max-w-[1200px] h-[120px] mx-auto hidden items-center justify-between px-4 py-5 min-[980px]:flex">
       {/* Logo */}
-      <Link href="/" className="shrink-0">
+      <Link href="/" className="shrink-0 focus:outline-none">
         <img
           src="/Header_Logo.svg"
           alt="ByteSpace"
@@ -42,7 +42,7 @@ export default function Navbar() {
         </Link>
         <button
           aria-label="Cart"
-          className="flex items-center justify-center hover:opacity-80 transition-opacity"
+          className="flex items-center justify-center hover:opacity-80 transition-opacity focus:outline-none"
         >
           <CartIcon />
         </button>

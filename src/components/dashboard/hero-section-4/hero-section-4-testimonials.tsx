@@ -32,7 +32,7 @@ export default function HeroSection4Testimonials() {
           min-[560px]:px-8 min-[560px]:py-14
           min-[720px]:px-12 min-[720px]:py-16
           min-[980px]:px-16
-          min-[1200px]:px-[120px] min-[1200px]:py-20 border-b
+          min-[1200px]:px-[120px] min-[1200px]:py-20
         "
       >
         {/* Top row — heading left, paragraph right */}

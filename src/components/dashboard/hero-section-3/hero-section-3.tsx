@@ -22,7 +22,7 @@ export default function HeroSection3() {
         "
       >
         {/* Left — text + stats */}
-        <div className="w-full min-[980px]:flex-1">
+        <div className="w-full min-[980px]:flex-1 order-2 min-[980px]:order-1">
           <HeroSection3Text />
         </div>
 
@@ -34,6 +34,7 @@ export default function HeroSection3() {
             min-[480px]:mt-12
             min-[640px]:mt-0
             min-[980px]:flex-1
+            order-1 min-[980px]:order-2
           "
         >
           <HeroSection3Visual />
