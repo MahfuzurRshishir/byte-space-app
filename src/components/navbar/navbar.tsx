@@ -18,8 +18,6 @@ export default function Navbar() {
         <img
           src="/Header_Logo.svg"
           alt="ByteSpace"
-          width={140}
-          className="h-auto"
         />
       </Link>
 

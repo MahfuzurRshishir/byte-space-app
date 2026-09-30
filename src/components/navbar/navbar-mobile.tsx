@@ -13,7 +13,7 @@ const navLinks = [
 ];
 
 const linkClass =
-  "text-[#F5F5F6] text-[16px] font-[200] leading-[24px] tracking-[0%] hover:underline transition-all";
+  "text-[#F5F5F6] text-[18px] font-[200] leading-[24px] tracking-[0%] hover:underline transition-all";
 
 export default function NavbarMobile() {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,16 +27,14 @@ export default function NavbarMobile() {
           <img
             src="/Header_Logo.svg"
             alt="ByteSpace"
-            width={140}
-            className="h-auto"
           />
         </Link>
 
-        {/* Hamburger toggle */}
+        {/* toggle */}
         <button
           aria-label={isOpen ? "Close menu" : "Open menu"}
           onClick={() => setIsOpen(!isOpen)}
-          className="flex items-center justify-center hover:opacity-80 transition-opacity"
+          className="flex items-center justify-center hover:opacity-80 transition-opacity cursor-pointer"
         >
           {isOpen ? <CrossIcon /> : <MenuIcon />}
         </button>
@@ -44,9 +42,9 @@ export default function NavbarMobile() {
 
       {/* Mobile menu panel */}
       {isOpen && (
-        <div className="w-full px-6 py-6 flex flex-col gap-6">
+        <div className="w-full px-6 py-8 flex flex-col gap-8 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)] ">
           {/* Nav links */}
-          <ul className="flex flex-col gap-4">
+          <ul className="flex flex-col gap-5">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <Link
@@ -61,10 +59,10 @@ export default function NavbarMobile() {
           </ul>
 
           {/* Divider */}
-          <div className="h-px w-full bg-[#F5F5F6]/20" />
+          <div className="h-px w-full bg-transparent" />
 
           {/* Auth links + cart */}
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-6">
             <Link
               href="/login"
               className={linkClass}
