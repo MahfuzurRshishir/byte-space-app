@@ -23,7 +23,7 @@ export default function NavbarMobile() {
       {/* Mobile top bar */}
       <div className="flex items-center justify-between px-4 h-[72px] min-[980px]:h-[120px]">
         {/* Logo */}
-        <Link href="/" className="shrink-0">
+        <Link href="/" className="shrink-0 focus:outline-none">
           <img
             src="/Header_Logo.svg"
             alt="ByteSpace"

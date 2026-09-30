@@ -14,44 +14,27 @@ const icons = [
   LogoipsumIcon5,
 ];
 
+// Duplicate icons for seamless infinite loop
+const loopIcons = [...icons, ...icons];
+
 export default function HeroSection1Logos() {
   return (
-    <section className="w-full bg-[#F5F5F6]">
-      {/* Inner container */}
-      <div
-        className="
-          mx-auto w-full max-w-[1440px]
-          py-8   px-4
-          min-[560px]:py-10  min-[560px]:px-8
-          min-[720px]:py-12  min-[720px]:px-12
-          min-[980px]:py-14  min-[980px]:px-16
-          min-[1200px]:py-16 min-[1200px]:px-24
-          min-[1440px]:py-20 min-[1440px]:px-[154px]
-        "
-      >
-        <div
-          className="
-            flex flex-wrap items-center justify-center
-            gap-6
-            min-[560px]:gap-8
-            min-[720px]:gap-10
-            min-[980px]:gap-12
-            min-[1200px]:gap-14
-            min-[1440px]:gap-[72px]
-          "
-        >
-          {icons.map((Icon, i) => (
+    <section className="w-full bg-[#F5F5F6] overflow-hidden">
+      <div className="py-8 min-[560px]:py-10 min-[720px]:py-12 min-[980px]:py-14 min-[1200px]:py-16 min-[1440px]:py-20">
+        {/* Track — wide enough to hold 2× icons, animates left by 50% */}
+        <div className="flex animate-marquee" style={{ width: "max-content" }}>
+          {loopIcons.map((Icon, i) => (
             <div
               key={i}
               className="
                 shrink-0
                 [&>svg]:w-full [&>svg]:h-auto
-                w-[90px]
-                min-[480px]:w-[110px]
-                min-[640px]:w-[130px]
-                min-[860px]:w-[148px]
-                min-[1080px]:w-[158px]
-                min-[1200px]:w-[167px]
+                w-[90px]   mx-6
+                min-[480px]:w-[110px] min-[480px]:mx-8
+                min-[640px]:w-[130px] min-[640px]:mx-10
+                min-[860px]:w-[148px] min-[860px]:mx-12
+                min-[1080px]:w-[158px] min-[1080px]:mx-14
+                min-[1200px]:w-[167px] min-[1200px]:mx-[72px]
               "
             >
               <Icon />

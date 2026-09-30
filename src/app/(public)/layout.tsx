@@ -1,10 +1,12 @@
 import NavbarRoot from "@/components/navbar/navbar-root";
+import Footer from "@/components/footer/footer";
 
 export default function PublicLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <NavbarRoot />
       <main className="pt-[72px] min-[980px]:pt-[120px]">{children}</main>
+      <Footer />
     </>
   );
 }
