@@ -22,9 +22,9 @@ export default function HeroSection1() {
 
         {/*  Ornaments — hidden below 450px  */}
 
-        {/* Blob green — left edge, top 11% of section height */}
+        {/* Blob green — left edge */}
         <img
-          src="/ornaments/ornament-blob-green-left.svg"
+          src="/ornaments/hero-section-1/ornament-blob-green-left.svg"
           alt="" aria-hidden="true"
           className="
             hidden min-[480px]:block
@@ -45,7 +45,7 @@ export default function HeroSection1() {
 
         {/* Wave white — left interior ~14%, top 40% */}
         <img
-          src="/ornaments/ornament-wave-white-left.svg"
+          src="/ornaments/hero-section-1/ornament-wave-white-left.svg"
           alt="" aria-hidden="true"
           className="
             hidden min-[480px]:block
@@ -69,7 +69,7 @@ export default function HeroSection1() {
 
         {/* Ring white — left edge, top 65% */}
         <img
-          src="/ornaments/ornament-ring-white-left.svg"
+          src="/ornaments/hero-section-1/ornament-ring-white-left.svg"
           alt="" aria-hidden="true"
           className="
             hidden min-[480px]:block
@@ -90,7 +90,7 @@ export default function HeroSection1() {
 
         {/* Cylinder green — right edge, top 11% */}
         <img
-          src="/ornaments/ornament-cylinder-green-right.svg"
+          src="/ornaments/hero-section-1/ornament-cylinder-green-right.svg"
           alt="" aria-hidden="true"
           className="
             hidden min-[480px]:block
@@ -111,7 +111,7 @@ export default function HeroSection1() {
 
         {/* Triangle white — right interior ~73%, top 40% */}
         <img
-          src="/ornaments/ornament-triangle-white-right.svg"
+          src="/ornaments/hero-section-1/ornament-triangle-white-right.svg"
           alt="" aria-hidden="true"
           className="
             hidden min-[480px]:block
@@ -135,7 +135,7 @@ export default function HeroSection1() {
 
         {/* Wave white — right edge, top 65% */}
         <img
-          src="/ornaments/ornament-wave-white-right.svg"
+          src="/ornaments/hero-section-1/ornament-wave-white-right.svg"
           alt="" aria-hidden="true"
           className="
             hidden min-[480px]:block
