@@ -21,7 +21,7 @@ export default function NavbarMobile() {
   return (
     <div className="min-[980px]:hidden">
       {/* Mobile top bar */}
-      <div className="flex items-center justify-between px-4 h-[120px]">
+      <div className="flex items-center justify-between px-4 h-[72px] min-[980px]:h-[120px]">
         {/* Logo */}
         <Link href="/" className="shrink-0">
           <img
