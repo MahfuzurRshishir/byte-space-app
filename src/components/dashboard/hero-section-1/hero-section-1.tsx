@@ -49,7 +49,7 @@ export default function HeroSection1() {
           alt="" aria-hidden="true"
           className="
             hidden min-[480px]:block
-            absolute pointer-events-none z-[1] rotate-180 left-[14%]
+            absolute pointer-events-none z-1 rotate-180 left-[14%]
             top-[48%]
             min-[640px]:top-[44%]
             min-[720px]:top-[40%]
@@ -154,7 +154,7 @@ export default function HeroSection1() {
           "
         />
 
-        {/* ── Main content  */}
+        {/*  Main content  */}
 
         {/* Headline + subtext */}
         <div className="mt-20 w-full flex justify-center">

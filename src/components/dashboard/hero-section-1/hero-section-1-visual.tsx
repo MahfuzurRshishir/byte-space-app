@@ -2,10 +2,8 @@ import { CardCourse, CardProgress, CardStudents } from "@/components/dashboard/h
 
 export default function HeroSection1Visual() {
   return (
-    // Container is relative — cards are positioned inside here
-    // Height is driven by the student image (aspect ratio 722:515 = 0.713)
-    <div className="relative w-full flex justify-center">
-      {/* Green half circle — scales proportionally with screen width */}
+    <div className="relative w-full flex justify-center overflow-hidden">
+      {/* Green half circle */}
       <div
         className="
           absolute left-1/2 -translate-x-1/2 rounded-full bg-accent
@@ -17,7 +15,7 @@ export default function HeroSection1Visual() {
         "
       />
 
-      {/* Student image — scales proportionally, drives container height */}
+      {/* Student image */}
       <img
         src="/img-hero-frame-1.svg"
         alt="Student with headphones and laptop"
@@ -31,7 +29,7 @@ export default function HeroSection1Visual() {
         "
       />
 
-      {/* Stat cards — positioned relative to this container */}
+      {/* Stat cards */}
       <CardCourse />
       <CardProgress />
       <CardStudents />
