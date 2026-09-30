@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { CartIcon } from "@/lib/svg/dashboard/cartIcon";
@@ -14,7 +13,7 @@ const navLinks = [
 ];
 
 const linkClass =
-  "text-[#F5F5F6] text-[16px] font-[300] leading-[24px] tracking-[0%] hover:underline transition-all";
+  "text-[#F5F5F6] text-[16px] font-[200] leading-[24px] tracking-[0%] hover:underline transition-all";
 
 export default function NavbarMobile() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,15 +21,14 @@ export default function NavbarMobile() {
   return (
     <div className="min-[980px]:hidden">
       {/* Mobile top bar */}
-      <div className="flex items-center justify-between px-4 py-5">
+      <div className="flex items-center justify-between px-4 h-[120px]">
         {/* Logo */}
         <Link href="/" className="shrink-0">
-          <Image
+          <img
             src="/Header_Logo.svg"
             alt="ByteSpace"
             width={140}
-            height={32}
-            priority
+            className="h-auto"
           />
         </Link>
 
@@ -83,7 +81,7 @@ export default function NavbarMobile() {
             </Link>
             <button
               aria-label="Cart"
-              className="flex items-center justify-start hover:opacity-80 transition-opacity"
+              className="flex items-center  cursor-pointer justify-start hover:opacity-80 transition-opacity"
             >
               <CartIcon />
             </button>

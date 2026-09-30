@@ -1,7 +1,9 @@
+import HeroSection1 from "@/components/dashboard/hero-section-1/hero-section-1";
+
 export default function DashboardPage() {
   return (
-    <div>
-      <h1>Dashboard</h1>
-    </div>
+    <>
+      <HeroSection1 />
+    </>
   );
 }
