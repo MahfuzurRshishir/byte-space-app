@@ -7,7 +7,7 @@ export default function HeroSection3() {
       <div
         className="
           mx-auto w-full max-w-[1440px]
-          py-8   px-4
+          py-20   px-4
           min-[560px]:py-10  min-[560px]:px-8
           min-[720px]:py-14  min-[720px]:px-12
           min-[980px]:px-16
