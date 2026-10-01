@@ -1,4 +1,5 @@
 import { SearchIcon } from "@/lib/svg/dashboard/searchIcon";
+import Button from "@/components/ui/button";
 
 export default function HeroSection1Search() {
   return (
@@ -48,10 +49,11 @@ export default function HeroSection1Search() {
       </div>
 
       {/* Search button */}
-      <button
+      <Button
+        variant="search"
         className="
-          shrink-0 flex items-center justify-center
-          font-sans font-[300] leading-[120%] tracking-normal text-[#242528] bg-[#D4FB20] rounded-[24px] cursor-pointer
+          shrink-0
+          rounded-[24px]
           w-full max-w-[72px] mx-auto h-[34px] px-3
           min-[450px]:max-w-none min-[450px]:mx-0 min-[450px]:w-[72px] min-[450px]:h-[36px] min-[450px]:px-4
           min-[560px]:w-[80px] min-[560px]:h-[38px]
@@ -68,7 +70,7 @@ export default function HeroSection1Search() {
         "
       >
         Search
-      </button>
+      </Button>
     </div>
   );
 }

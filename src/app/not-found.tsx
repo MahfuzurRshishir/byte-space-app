@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import NavbarRoot from "@/components/navbar/navbar-root";
 import Footer from "@/components/footer/footer";
+import Button from "@/components/ui/button";
 
 export const metadata: Metadata = {
   title: "404 — Page Not Found | ByteSpace",
@@ -65,21 +65,12 @@ export default function NotFound() {
           </p>
 
           {/* ── CTA ── */}
-          <Link
+          <Button
             href="/"
-            className="
-              mt-8 min-[640px]:mt-10
-              inline-flex items-center justify-center
-              [font-family:var(--font-poppins)] font-semibold
-              text-[#242528] text-[14px] min-[640px]:text-[15px]
-              bg-[#D4FB20] hover:bg-[#c5ef10]
-              rounded-full
-              px-8 h-[48px] min-[640px]:h-[52px]
-              transition-colors duration-150
-            "
+            className="mt-8 min-[640px]:mt-10 h-[48px] min-[640px]:h-[52px]"
           >
             Back to Home
-          </Link>
+          </Button>
 
         </div>
       </section>

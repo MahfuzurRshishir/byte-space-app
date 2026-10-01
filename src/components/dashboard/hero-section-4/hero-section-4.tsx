@@ -1,3 +1,5 @@
+import Button from "@/components/ui/button";
+
 export default function HeroSection4() {
   return (
     <section className="relative w-full overflow-hidden bg-[#003BE2]">
@@ -227,21 +229,9 @@ export default function HeroSection4() {
           </p>
 
           {/* CTA Button */}
-          <button
-            className="
-              mt-8
-              [font-family:var(--font-satoshi)] font-medium text-[#242528]
-              leading-[120%] tracking-normal
-              text-[16px] min-[1080px]:text-[16px]
-              bg-[#D4FB20] rounded-[24px]
-              px-8
-              h-[42px] min-[1080px]:h-[46px]
-              hover:bg-[#bde800] hover:text-[#242528] transition-colors duration-200
-              cursor-pointer
-            "
-          >
+          <Button className="mt-8">
             Join as Creator
-          </button>
+          </Button>
         </div>
 
       </div>

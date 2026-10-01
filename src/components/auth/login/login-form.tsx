@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import AuthInput from "@/components/auth/shared/auth-input";
 import { FBLogo, GoogleLogo } from "@/lib/svg/dashboard/logoIcons";
+import Button from "@/components/ui/button";
 
 export default function LoginForm() {
   const [email, setEmail] = useState("");
@@ -47,19 +48,7 @@ export default function LoginForm() {
 
       {/* ── Submit ── */}
       <div className="flex justify-end mb-6">
-        <button
-          type="submit"
-          className="
-            [font-family:var(--font-poppins)] font-semibold
-            text-[#242528] text-[14px] min-[640px]:text-[15px]
-            bg-[#D4FB20] hover:bg-[#c5ef10]
-            rounded-full px-8 h-[46px] min-[640px]:h-[50px]
-            transition-colors duration-150
-            cursor-pointer
-          "
-        >
-          Sign In
-        </button>
+        <Button type="submit">Sign In</Button>
       </div>
 
       {/* ── Divider ── */}
@@ -74,22 +63,14 @@ export default function LoginForm() {
       {/* ── Social buttons ── */}
       <div className="flex justify-center gap-4">
         {/* Facebook */}
-        <button
-          type="button"
-          aria-label="Sign in with Facebook"
-          className="w-[72px] h-[72px] rounded-[24px] border border-[#D1D1D1] flex items-center justify-center bg-white hover:bg-[#F5F5F6] transition-colors duration-150 cursor-pointer"
-        >
+        <Button variant="social" aria-label="Sign in with Facebook">
           <FBLogo />
-        </button>
+        </Button>
 
         {/* Google */}
-        <button
-          type="button"
-          aria-label="Sign in with Google"
-          className="w-[72px] h-[72px] rounded-[24px] border border-[#D1D1D1] flex items-center justify-center bg-white hover:bg-[#F5F5F6] transition-colors duration-150 cursor-pointer"
-        >
+        <Button variant="social" aria-label="Sign in with Google">
           <GoogleLogo />
-        </button>
+        </Button>
       </div>
 
       {/* ── Spacer — responsive height-based gap, max 70px ── */}
