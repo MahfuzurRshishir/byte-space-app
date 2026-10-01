@@ -28,6 +28,12 @@ A pixel-perfect, fully responsive frontend for an online course marketplace. Bui
 - Custom password field with show/hide toggle and CSS asterisk masking via `-webkit-text-security`
 - Social sign-in buttons (UI placeholder)
 
+**404 Page (any unmatched route)**
+- Full-viewport blue hero section with the same grid-texture background as the rest of the app
+- Giant `404` display text in Poppins SemiBold with a vertical green-to-transparent gradient fade, overlapping the heading beneath it
+- Heading, subtext, and a "Back to Home" CTA pill button
+- Implemented via `src/app/not-found.tsx` — Next.js App Router's root-level not-found convention, automatically triggered for all unmatched URLs with a proper `404` HTTP status
+
 **Navbar & Footer**
 - Fixed top navbar with desktop and mobile variants (hamburger menu with animated toggle)
 - Footer with newsletter input, 3-column sitemap links, and dynamic copyright year
@@ -86,6 +92,7 @@ src/
 │   ├── layout.tsx                  # Root layout — fonts, metadata, body
 │   ├── globals.css                 # Design tokens + Tailwind + custom utilities
 │   ├── page.tsx                    # Root redirect → /dashboard
+│   ├── not-found.tsx               # Global 404 page — all unmatched routes
 │   ├── (auth)/                     # Auth route group (no navbar/footer)
 │   │   ├── login/page.tsx
 │   │   └── register/page.tsx
@@ -131,6 +138,7 @@ Other available routes:
 - `/dashboard` — main landing page
 - `/login` — login page
 - `/register` — registration page
+- any other path — custom 404 page
 
 ---
 
