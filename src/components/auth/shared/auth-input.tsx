@@ -60,7 +60,7 @@ export default function AuthInput({
           <button
             type="button"
             onClick={() => setShowPassword((v) => !v)}
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-[#AEAFB5] hover:text-[#4B4C53] transition-colors"
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-[#AEAFB5] hover:text-[#4B4C53] transition-colors cursor-pointer"
             aria-label={showPassword ? "Hide password" : "Show password"}
           >
             {showPassword ? (

@@ -67,7 +67,7 @@ export default function RegisterForm() {
         Already have an account?{" "}
         <Link
           href="/login"
-          className="text-[#003BE2] font-medium hover:underline"
+          className="text-[#003BE2] font-medium hover:underline cursor-pointer"
         >
           Login
         </Link>

@@ -81,7 +81,7 @@ export default function LoginForm() {
         New user?{" "}
         <Link
           href="/register"
-          className="text-[#003BE2] font-medium hover:underline"
+          className="text-[#003BE2] font-medium hover:underline cursor-pointer"
         >
           Create an account
         </Link>
