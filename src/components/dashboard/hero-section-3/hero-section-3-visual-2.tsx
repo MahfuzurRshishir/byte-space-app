@@ -5,6 +5,22 @@ export default function HeroSection3Visual2() {
   return (
     <div className="relative w-full flex justify-center min-[980px]:justify-start">
 
+      {/* Green radial glow blob — sits behind the girl image at all breakpoints */}
+      <div
+        aria-hidden
+        className="
+          pointer-events-none absolute rounded-full z-[1]
+          -left-[144px] top-[50px]   w-[336px]  h-[336px]
+          min-[640px]:-left-[216px]  min-[640px]:top-[76px]  min-[640px]:w-[504px]  min-[640px]:h-[504px]
+          min-[1440px]:-left-[389px] min-[1440px]:top-[202px] min-[1440px]:w-[672px] min-[1440px]:h-[672px]
+        "
+        style={{
+          background:
+            "radial-gradient(50% 50% at 50% 50%, rgba(203,252,1,0.6) 0%, rgba(203,252,1,0.138) 53%, rgba(203,252,1,0.036) 75%, rgba(203,252,1,0) 100%)",
+          filter: "blur(40px)",
+        }}
+      />
+
       {/* Total Revenue card — top-right, positioned absolutely */}
       <CardTotalRevenue />
 
