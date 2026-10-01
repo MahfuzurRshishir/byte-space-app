@@ -18,7 +18,7 @@ export default function AuthFormWrapper({
   return (
 
     <div
-      className="relative min-h-screen w-full bg-primary overflow-hidden lg:h-screen"
+      className="relative h-screen w-full bg-primary overflow-hidden"
       style={{
         backgroundImage: `
           linear-gradient(to right, rgba(255,255,255,0.07) 2px, transparent 2px),
@@ -28,7 +28,7 @@ export default function AuthFormWrapper({
       }}
     >
       {/* ── Max-width constraint ── */}
-      <div className="relative z-10 w-full max-w-[1440px] mx-auto min-h-screen flex flex-col lg:flex-row lg:h-full lg:gap-[40px] xl:gap-[60px] min-[1440px]:gap-[100px]">
+      <div className="relative z-10 w-full max-w-[1440px] mx-auto h-full flex flex-col lg:flex-row lg:gap-[40px] xl:gap-[60px] min-[1440px]:gap-[100px]">
 
         {/* ══ LEFT PANEL — hidden below 1024px ══ */}
         <div className="
@@ -70,11 +70,10 @@ export default function AuthFormWrapper({
         {/* ══ RIGHT PANEL — white card, full width below 1024px ══ */}
         <div className="
           flex items-center justify-center
-          min-h-[min(100vh,1000px)]
+          w-full h-full overflow-y-auto scrollbar-hide
           px-4 py-[clamp(48px,8vh,80px)]
           min-[480px]:px-8
           lg:items-start lg:justify-center
-          lg:min-h-0 lg:h-full lg:overflow-y-auto scrollbar-hide
           lg:px-10 lg:pt-[120px] lg:pb-10
           lg:w-[560px] xl:w-[600px]
         ">
