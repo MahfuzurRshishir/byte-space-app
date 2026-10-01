@@ -22,6 +22,19 @@ A pixel-perfect, fully responsive frontend for an online course marketplace. Bui
 - Creator CTA banner
 - Testimonials section with 3 real-looking reviewer cards
 
+**Creators Page (`/creators`)**
+- Blue grid-texture profile banner matching the site's visual language
+- Creator avatar with a rounded-rectangle frame (96×96px, `border-radius: 24px`), name, "Creator" badge, tagline, and multi-paragraph bio
+- Stats row with Products and Followers pill counters and a Follow CTA button
+- Filter toolbar (Filter / Level / Category / Most relevant) with SVG icons
+- Responsive 3-column course grid reusing the shared `HeroSection2Card` component
+
+**Courses Page (`/courses`)**
+- Blue grid-texture hero with a centered "Find Your Next Course" heading and a search bar with a separate "Courses ▾" pill button
+- Filter toolbar identical in structure to the creators page
+- 9 category chips ("Free trial", "Music", "Drawing & Painting", and more) with active selection state
+- Paginated course grid — 21 cards per page across 4 pages (84 total), with `‹ 1 2 3 4 ›` pagination controls that slice and update the visible grid client-side
+
 **Auth Pages (`/login`, `/register`)**
 - Split-panel layout: decorative course card collage on the left (desktop), clean form card on the right
 - Controlled inputs with inline validation-ready structure
@@ -97,7 +110,9 @@ src/
 │   │   ├── login/page.tsx
 │   │   └── register/page.tsx
 │   └── (public)/                   # Public route group (with navbar/footer)
-│       └── dashboard/page.tsx
+│       ├── dashboard/page.tsx
+│       ├── creators/page.tsx
+│       └── courses/page.tsx
 ├── components/
 │   ├── navbar/                     # Desktop navbar + mobile hamburger menu
 │   ├── footer/                     # Footer with sitemap links + newsletter
@@ -105,13 +120,28 @@ src/
 │   │   ├── shared/                 # AuthFormWrapper, AuthInput, AuthCollage
 │   │   ├── login/                  # LoginForm
 │   │   └── register/               # RegisterForm
-│   └── dashboard/
-│       ├── hero-section-1/         # Main hero (headline, search, visual, floating cards)
-│       ├── hero-section-2/         # Course catalog (chips, cards, categories)
-│       ├── hero-section-3/         # Growth section + creator tools
-│       └── hero-section-4/         # Creator CTA + testimonials
+│   ├── dashboard/
+│   │   ├── hero-section-1/         # Main hero (headline, search, visual, floating cards)
+│   │   ├── hero-section-2/         # Course catalog (chips, cards, categories)
+│   │   ├── hero-section-3/         # Growth section + creator tools
+│   │   └── hero-section-4/         # Creator CTA + testimonials
+│   ├── creators/
+│   │   ├── creator-hero/           # Profile banner (avatar, name, badge, bio, stats)
+│   │   └── creator-courses/        # Filter toolbar + course grid
+│   └── courses/
+│       ├── courses-hero/           # Blue hero with heading + search bar
+│       └── courses-listing/        # Filter, chips, paginated grid + pagination controls
 ├── lib/
-│   └── svg/dashboard/              # Inline SVG icon components
+│   ├── svg/
+│   │   ├── dashboard/              # Navbar, search, star, logo SVG icons
+│   │   ├── creators/               # Filter, Level, Category, MostRelevant icons
+│   │   └── courses/                # ChevronDown icon
+│   ├── types/
+│   │   ├── creator.ts              # CreatorProfile, CreatorStats, CreatorData
+│   │   └── course.ts               # CourseCardProps re-export, CoursesData
+│   └── data/
+│       ├── creator.ts              # Static CREATOR data object
+│       └── courses.ts              # 84-item COURSES_DATA array (cycled)
 └── fonts/
     └── Satoshi-Variable.woff2/.woff
 ```
@@ -136,6 +166,8 @@ Open [http://localhost:3000](http://localhost:3000) in your browser. The root UR
 
 Other available routes:
 - `/dashboard` — main landing page
+- `/creators` — creator profile page with course listing
+- `/courses` — full course catalog with pagination
 - `/login` — login page
 - `/register` — registration page
 - any other path — custom 404 page
