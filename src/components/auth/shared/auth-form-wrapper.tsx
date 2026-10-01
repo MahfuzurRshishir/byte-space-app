@@ -70,8 +70,8 @@ export default function AuthFormWrapper({
         {/* ══ RIGHT PANEL — white card, full width below 1024px ══ */}
         <div className="
           flex items-center justify-center
-          min-h-screen
-          px-4 py-10
+          min-h-[min(100vh,1000px)]
+          px-4 py-[clamp(48px,8vh,80px)]
           min-[480px]:px-8
           lg:items-start lg:justify-center
           lg:min-h-0 lg:h-full lg:overflow-y-auto scrollbar-hide
