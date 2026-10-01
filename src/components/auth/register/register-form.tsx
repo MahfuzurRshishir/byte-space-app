@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import AuthInput from "@/components/auth/shared/auth-input";
+import Button from "@/components/ui/button";
 
 export default function RegisterForm() {
   const [fullName, setFullName] = useState("");
@@ -55,19 +56,7 @@ export default function RegisterForm() {
 
       {/* ── Submit ── */}
       <div className="flex justify-end">
-        <button
-          type="submit"
-          className="
-            [font-family:var(--font-poppins)] font-semibold
-            text-[#242528] text-[14px] min-[640px]:text-[15px]
-            bg-[#D4FB20] hover:bg-[#c5ef10]
-            rounded-full px-8 h-[46px] min-[640px]:h-[50px]
-            transition-colors duration-150
-            cursor-pointer
-          "
-        >
-          Continue
-        </button>
+        <Button type="submit">Continue</Button>
       </div>
 
       {/* ── Spacer — responsive height-based gap, max 120px ── */}
