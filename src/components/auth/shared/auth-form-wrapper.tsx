@@ -1,5 +1,6 @@
 import Link from "next/link";
 import AuthCollage from "@/components/auth/shared/auth-collage";
+import AuthMobileHeader from "@/components/auth/shared/auth-mobile-header";
 
 interface AuthFormWrapperProps {
   /** Left panel headline */
@@ -69,25 +70,33 @@ export default function AuthFormWrapper({
 
         {/* ══ RIGHT PANEL — white card, full width below 1024px ══ */}
         <div className="
-          flex items-center justify-center
+          flex items-start justify-center
           w-full h-full overflow-y-auto scrollbar-hide
           px-4 py-[clamp(48px,8vh,80px)]
           min-[480px]:px-8
-          lg:items-start lg:justify-center
+          lg:justify-center
           lg:px-10 lg:pt-[120px] lg:pb-10
           lg:w-[560px] xl:w-[600px]
         ">
-          <div className="
-            w-full bg-white
-            rounded-[20px] lg:rounded-[24px]
-            px-6 pt-8 pb-[50px]
-            min-[480px]:px-8 min-[480px]:pt-10
-            lg:px-10 lg:pt-12
-            shadow-[0_8px_48px_0_rgba(0,0,0,0.12)]
-            max-w-[480px] lg:max-w-[600px]
-            flex flex-col
-          ">
-            {children}
+          {/* Inner column — stacks mobile header above card on small screens */}
+          <div className="flex flex-col items-center w-full max-w-[480px] gap-6 lg:max-w-none lg:gap-0">
+
+            {/* Mobile-only logo + headline + subtext */}
+            <AuthMobileHeader headline={headline} subtext={subtext} />
+
+            <div className="
+              w-full bg-white
+              rounded-[20px] lg:rounded-[24px]
+              px-6 pt-8 pb-[50px]
+              min-[480px]:px-8 min-[480px]:pt-10
+              lg:px-10 lg:pt-12
+              shadow-[0_8px_48px_0_rgba(0,0,0,0.12)]
+              max-w-[480px] lg:max-w-[600px]
+              flex flex-col
+            ">
+              {children}
+            </div>
+
           </div>
         </div>
 
