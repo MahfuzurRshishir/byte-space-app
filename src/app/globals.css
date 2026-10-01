@@ -45,6 +45,25 @@ body {
   color: var(--color-foreground);
 }
 
+/* ─── Hide scrollbar utility */
+.scrollbar-hide {
+  scrollbar-width: none;       /* Firefox */
+  -ms-overflow-style: none;    /* IE / Edge legacy */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;               /* Chrome / Safari / modern Edge */
+}
+
+/* ─── Password field — asterisk mask ────────────────────── */
+/*
+ * Override the browser's default bullet mask (•) with an asterisk (*).
+ * -webkit-text-security works in Chrome, Edge, and Safari.
+ * Firefox renders password fields with * natively on most platforms.
+ */
+input[data-password-mask="true"] {
+  -webkit-text-security: asterisk;
+}
+
 /* ─── Marquee animation ──────────────────────────────────── */
 @keyframes marquee {
   0%   { transform: translateX(0); }
