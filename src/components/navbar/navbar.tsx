@@ -8,7 +8,7 @@ const navLinks = [
 ];
 
 const linkClass =
-  "text-[#F5F5F6] text-[16px] font-[200] leading-[24px] tracking-[0%] hover:underline transition-all focus:outline-none";
+  "text-[#F5F5F6] text-[16px] font-[200] leading-[24px] tracking-[0%] hover:underline transition-all focus:outline-none cursor-pointer";
 
 export default function Navbar() {
   return (
@@ -42,7 +42,7 @@ export default function Navbar() {
         </Link>
         <button
           aria-label="Cart"
-          className="flex items-center justify-center hover:opacity-80 transition-opacity focus:outline-none"
+          className="flex items-center justify-center hover:opacity-80 transition-opacity focus:outline-none cursor-pointer"
         >
           <CartIcon />
         </button>
