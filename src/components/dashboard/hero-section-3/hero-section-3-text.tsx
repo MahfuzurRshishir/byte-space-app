@@ -65,7 +65,7 @@ export default function HeroSection3Text() {
   return (
     <div className="flex flex-col gap-6 min-[980px]:gap-8 w-full">
 
-      <h2 className="[font-family:var(--font-poppins)] font-semibold text-[#242528] leading-[120%] tracking-[-0.01em] text-[28px] min-[480px]:text-[32px] min-[640px]:text-[36px] min-[860px]:text-[40px] min-[1080px]:text-[44px]">
+      <h2 className="[font-family:var(--font-poppins)] font-semibold text-[#242528] leading-[120%] tracking-[-0.01em] text-[28px] min-[480px]:text-[32px] min-[640px]:text-[36px] min-[860px]:text-[40px] min-[1080px]:text-[44px] z-10">
         Your Path to Professional <br /> Growth Starts Here!
       </h2>
 

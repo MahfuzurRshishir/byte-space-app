@@ -3,7 +3,7 @@ import HeroSection3Content from "@/components/dashboard/hero-section-3/hero-sect
 
 export default function HeroSection3Part2() {
   return (
-    <section className="relative w-full bg-[#FAFAFA] overflow-hidden">
+    <section className="relative w-full overflow-hidden">
       <div
         className="
           mx-auto w-full max-w-[1440px]
