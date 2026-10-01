@@ -1,19 +1,22 @@
 import Link from "next/link";
 
-// ─── Types 
+// ─── Types
 
 type BaseProps = {
   /** Visual style:
-   *  - "primary"  → standard pill CTA (rounded-full, 46/50px height, px-8, lime green)
+   *  - "primary"  → standard pill CTA (rounded-full, lime green)
    *  - "social"   → icon-only square (72×72, rounded-[24px], white bg, bordered)
    *  - "search"   → same colors/font as primary but NO built-in shape/size
    *                 (pass all sizing via className — used by the search bar)
    *  - "filter"   → bordered pill (rounded-full, 48px height, white bg, Satoshi Medium 16px)
-   *                 used for Filter / Level / Category / Most relevant on the creators page
    *  - "stat"     → pill with white bg + backdrop blur (rounded-full, 46px height)
-   *                 used for Products / Followers stat counters on the creators page
    */
   variant?: "primary" | "social" | "search" | "filter" | "stat";
+  /**
+   * Optional icon rendered after the label (trailing icon).
+   * Pass a React element — e.g. icon={<ChevronDown />}
+   */
+  icon?: React.ReactNode;
   /** Extra Tailwind classes — appended after the base styles */
   className?: string;
   children: React.ReactNode;
@@ -42,14 +45,18 @@ type ButtonProps = AsPrimaryButton | AsSocialButton;
 
 /** Shared color/font/transition core — no shape or sizing */
 const primaryCore =
-  "inline-flex items-center justify-center " +
+  "inline-flex items-center justify-center gap-2 " +
   "[font-family:var(--font-poppins)] font-semibold " +
   "text-[#242528] text-[14px] min-[640px]:text-[15px] " +
   "bg-[#D4FB20] hover:bg-[#c5ef10] " +
   "transition-colors duration-150 cursor-pointer";
 
 /** Standard pill shape added on top of core */
-const primaryShape = "rounded-full px-5 h-[40px] min-[480px]:px-6 min-[480px]:h-[44px] min-[640px]:px-8 min-[640px]:h-[46px] min-[980px]:h-[50px]";
+const primaryShape =
+  "rounded-full px-5 h-[40px] " +
+  "min-[480px]:px-6 min-[480px]:h-[44px] " +
+  "min-[640px]:px-8 min-[640px]:h-[46px] " +
+  "min-[980px]:h-[50px]";
 
 const socialBase =
   "inline-flex items-center justify-center " +
@@ -89,6 +96,7 @@ const statBase =
 
 export default function Button({
   variant = "primary",
+  icon,
   className = "",
   children,
   ...props
@@ -98,38 +106,47 @@ export default function Button({
   if (variant === "social") {
     baseClass = socialBase;
   } else if (variant === "search") {
-    // Core styles only — caller supplies all shape/sizing via className
     baseClass = primaryCore;
   } else if (variant === "filter") {
     baseClass = filterBase;
   } else if (variant === "stat") {
     baseClass = statBase;
   } else {
-    // primary — core + standard pill shape
     baseClass = `${primaryCore} ${primaryShape}`;
   }
 
   const combined = className ? `${baseClass} ${className}` : baseClass;
 
+  const content = (
+    <>
+      {children}
+      {icon && (
+        <span className="shrink-0 inline-flex items-center [&>svg]:w-[14px] [&>svg]:h-[14px] min-[640px]:[&>svg]:w-[16px] min-[640px]:[&>svg]:h-[16px] min-[980px]:[&>svg]:w-[20px] min-[980px]:[&>svg]:h-[20px]">
+          {icon}
+        </span>
+      )}
+    </>
+  );
+
   // Primary / search / filter / stat variant with href → render as Link
   if (variant !== "social" && "href" in props && props.href) {
-    const { href, type: _type, onClick: _onClick, variant: _variant, className: _className, ...rest } = props as AsPrimaryButton;
+    const { href, type: _type, onClick: _onClick, variant: _variant, icon: _icon, className: _className, ...rest } = props as AsPrimaryButton & { icon?: React.ReactNode };
     return (
       <Link href={href as string} className={combined} {...rest}>
-        {children}
+        {content}
       </Link>
     );
   }
 
   // All other cases → render as <button>
-  const { href: _href, variant: _variant, className: _className, ...buttonProps } = props as AsPrimaryButton;
+  const { href: _href, variant: _variant, icon: _icon, className: _className, ...buttonProps } = props as AsPrimaryButton & { icon?: React.ReactNode };
   return (
     <button
       type={buttonProps.type ?? "button"}
       className={combined}
       {...buttonProps}
     >
-      {children}
+      {content}
     </button>
   );
 }
